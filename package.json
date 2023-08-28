@@ -1,0 +1,15 @@
+{
+  "name": "job-4",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "build": "sass scss/main.scss css/style.css --no-source-map --style=compressed",
+    "dev": "sass scss/main.scss css/style.css -w"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "sass": "^1.66.1"
+  }
+}

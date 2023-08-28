@@ -1,0 +1,25 @@
+$primary: #88dbdf;
+
+$white: #fff;
+
+$gray-white: #f8f8f8;
+
+$gray: #808080;
+
+// color
+.c-primary {
+  color: $primary;
+}
+
+.c-gray {
+  color: $gray;
+}
+
+// backgrounds
+.bg-primario {
+  background-color: $primary;
+}
+
+.bg-gray-white {
+  background-color: $gray-white;
+}

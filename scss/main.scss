@@ -1,0 +1,169 @@
+@use './reset';
+@use './colors' as *;
+
+.contenedor {
+  max-width: 1200px;
+  margin-right: auto;
+  margin-left: auto;
+  padding-left: 2rem;
+  padding-right: 2rem;
+}
+
+.center {
+  display: grid;
+  place-items: center;
+}
+
+.fs-sm {
+  font-size: 1.8rem;
+}
+
+.fs-md {
+  font-size: 3rem;
+}
+
+.fs-big {
+  font-size: 4rem;
+}
+
+.line {
+  position: relative;
+  margin-bottom: 4rem;
+
+  &::after {
+    content: '';
+    position: absolute;
+    bottom: -2rem;
+    left: 50%;
+
+    translate: -50%;
+
+    height: 0.1rem;
+    width: 5rem;
+
+    background-color: $primary;
+  }
+
+  &--left {
+    margin-bottom: 0;
+    padding-left: 4rem;
+
+    &::after {
+      top: 1.5rem;
+      left: 0;
+      bottom: unset;
+
+      width: 3rem;
+    }
+  }
+}
+
+.button {
+  display: inline-block;
+  border: none;
+  border-radius: 0.5rem;
+  padding: 1.5rem 2.5rem;
+  cursor: pointer;
+
+  &--close {
+    position: absolute;
+    top: 0;
+    right: 0;
+
+    padding: 1.5rem 2rem;
+    border-radius: 0;
+  }
+}
+
+// sections
+.header {
+  background: url(../imgAfilidiados/header.png) no-repeat center center / cover;
+  color: $white;
+
+  &__box {
+    min-height: 50rem;
+  }
+
+  &__text {
+    text-shadow: 1px 1px 10px rgb(0, 0, 0);
+  }
+}
+
+.principal {
+  padding-bottom: 5rem;
+}
+
+.pasos {
+  &__text {
+    line-height: 1.8;
+  }
+
+  &__card {
+    flex-basis: 30rem;
+  }
+}
+
+.afiliate {
+  background: linear-gradient(transparent, black),
+    url(../imgAfilidiados/vinos.png) no-repeat center center / cover;
+  color: $white;
+
+  padding: 5rem 0;
+  margin-top: 5rem;
+
+  &__box {
+    max-width: 110rem;
+  }
+
+  &__text {
+    max-width: 70rem;
+  }
+}
+
+.beneficios {
+  &__boxImg {
+    padding: 5rem 3rem;
+  }
+}
+
+.modalStyle {
+  width: 100%;
+  max-width: 90rem;
+  padding: 0 2rem;
+  background-color: transparent;
+
+  margin: auto;
+  border: none;
+  outline: none;
+
+  &__box {
+    position: relative;
+    background-color: $white;
+    padding: 2rem;
+    padding-top: 5rem;
+    
+    border-radius: 1rem;
+  }
+
+  &::backdrop {
+    background-color: rgba(0, 0, 0, 0.5);
+    padding: 2rem 0;
+  }
+
+  &__input {
+    display: inline-block;
+    padding: 0.5rem 1.3rem;
+    width: 100%;
+
+    border-radius: 0.5rem;
+    border: 2px solid $gray-white;
+
+    &:focus {
+      outline-color: black;
+    }
+
+    &::placeholder {
+      color: $gray;
+    }
+  }
+}
